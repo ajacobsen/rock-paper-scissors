@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'marker';
+    src: url('/assets/font/PermanentMarker-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #6f97c5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px black;
+    box-shadow: inset -2px -1px 2px 1px #80a9d9, inset 2px 2px 1px 2px #425e7d;
+    padding: 10px 114px;
+    border-radius: 24px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    max-width: 80vw;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.board {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #6f97c5;
+    padding: 1em 2em;
+    border-radius: 2em;
+    box-shadow:
+        inset -2px -1px 2px 1px #80a9d9,
+        inset 2px 2px 1px 2px #425e7d;
+}
+
+.handsign {
+    width: 200px;
+    aspect-ratio: 1/1;
+    padding: 2em;
+    background-color: white;
+    border: 30px solid #df3232;
+    border-radius: 50%;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 4px 2px #333; */
+    box-shadow:
+        -2px -1px 2px 1px #ff6969,
+        2px 2px 1px 2px #22010194;
+    transition:
+        transform 500ms 250ms,
+        border 500ms,
+        opacity 500ms;
+}
+
+.rock {
+    background-image: url('/assets/images/hands/rock.svg');
+}
+
+.paper {
+    background-image: url('/assets/images/hands/paper.svg');
+}
+
+.scissors {
+    background-image: url('/assets/images/hands/scissors.svg');
+}
+
+.random {
+    background-image: url('/assets/images/hands/random.svg');
+}
+
+.cpu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6f97c5;
+    padding: 1em 2em;
+    border-radius: 2em;
+    box-shadow:
+    inset -2px -1px 2px 1px #80a9d9,
+    inset 2px 2px 1px 2px #425e7d;
+}
+
+.cpu-handsign {
+    width: 200px;
+    aspect-ratio: 1/1;
+    padding: 2em;
+    background-color: white;
+    border: 30px solid #df3232;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 4px 2px #333; */
+    box-shadow: 
+        -2px -1px 2px 1px #ff6969,
+        2px 2px 1px 2px #22010194;
+    transition:
+        transform 750ms cubic-bezier(.73,1.43,.58,1),
+        border 1s;
+}
+
+.cpu-handsign.loading {
+    transform: rotate(360deg);
+    border: 10px solid #df3232;
+    /* box-shadow: 0px 0px 4px 2px #333; */
+}
+
+.cpu-handsign.selected {
+    border: 10px solid #df3232;
+    cursor: default;
+}
+
+.handsign.selected {
+    border: 10px solid #df3232;
+    cursor: default;
+}
+
+.handsign.fade {
+    opacity: 0;
+    transform: scale(0, 0);
+    cursor: default;
+}
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.next-round {
+    font-size: 1.7rem;
+    padding: 0.5em;
+    box-shadow: -2px -1px 2px 1px #80a9d9, 2px 2px 1px 2px #425e7d;
+    background-color: #6f97c5;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+.next-round:hover {
+    box-shadow: inset -2px -1px 2px 1px #80a9d9, inset 2px 2px 1px 2px #425e7d;
+}
+
+.next-round:disabled {
+    box-shadow: none;
+    color: rgb(111, 151, 197);
+}
+
+.vs {
+    font-family: marker;
+    font-size: 130px;
+    color: white;
+    text-shadow: 2px 4px black;
+}
+
+.stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.star {
+    width: 100px;
+    filter: invert(73%) sepia(4%) saturate(5825%) hue-rotate(183deg) brightness(82%) contrast(86%);
+}
+
+.star-active {
+    filter: none;
+}
+
+footer {
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: inset -2px -1px 2px 1px #80a9d9, inset 2px 2px 1px 2px #425e7d;
+}

@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock - Paper - Scissors</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>Rock - Paper - Scissors</h1>
+        <main class="main">
+            
+            <div id="board" class="board">
+                
+                <div class="player">
+                </div>
+                
+                <div class="scoreboard">
+                    <div class="stars">
+                        <img id="player-star-1" class="star" src="assets/images/star.svg" alt="star">
+                        <img id="player-star-2" class="star" src="assets/images/star.svg" alt="star">
+                        <img id="player-star-3" class="star" src="assets/images/star.svg" alt="star">
+                    </div>
+                    <div class="controls">
+                        <button id="btn-next-round" class="next-round" onclick="game.resetHands()" disabled="">Next Round</button>
+                        <div class="vs">VS</div>
+                    </div>
+                    <div class="stars">
+                        <img id="cpu-star-1" class="star" src="assets/images/star.svg" alt="star">
+                        <img id="cpu-star-2" class="star" src="assets/images/star.svg" alt="star">
+                        <img id="cpu-star-3" class="star" src="assets/images/star.svg" alt="star">
+                    </div>
+                </div>
+
+                <div class="cpu">
+                </div>
+                
+            </div>
+        </main>
+        <footer>
+            &copy; 2022 Andy Jacobsen
+        </footer>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
